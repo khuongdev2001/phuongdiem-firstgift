@@ -111,7 +111,7 @@ const giftContent = document.querySelector(".gift-content");
 const headTitle = giftContent.querySelector("h3");
 const headContent = giftContent.querySelector("p");
 const date = new Date();
-window.onclick = function () {
+document.body.onclick = function () {
     play();
     boxGift.remove();
     giftContent.style.display = "block";
@@ -126,7 +126,7 @@ window.onclick = function () {
             }, 100);
         })
     })
-    window.onclick = null;
+    document.body.onclick = null;
 }
 
 function runText(message, delay, callback = function () { }, afterDone = function () { }) {
